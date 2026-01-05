@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Electricity App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="phone">
+    <div class="status-bar">
+      <span>9:41</span>
+      <span>100%</span>
+    </div>
+
+    <div class="app-content">
+      <!-- Home Tab -->
+      <div id="home-tab" class="tab active">
+        <div class="app-header">
+          <h1>Welcome Guest!</h1>
+          <p>Here's your usage & green news.</p>
+        </div>
+        <div class="content">
+          <h2 style="color: #333;">Green Earth News</h2>
+          <div class="news-feed">
+            <div class="news-item">
+              <img src="assets/trees.jpg" alt="Trees">
+              <h3>Company Plants 1 Million Trees</h3>
+              <p>A major tech firm reached its goal of planting 1M trees in 2025.</p>
+            </div>
+            <div class="news-item">
+              <img src="assets/solar.jpg" alt="Solar">
+              <h3>New Solar Panel Efficiency Record</h3>
+              <p>Researchers achieve 45% efficiency in lab tests.</p>
+            </div>
+            <div class="news-item">
+              <img src="assets/EVnorway.jpeg" alt="EV">
+              <h3>Electric Vehicles Outsell Gas in Norway</h3>
+              <p>Over 90% of new cars sold are electric this month.</p>
+            </div>
+          </div>
+
+          <h2 style="color: #333; margin-top: 30px;">App Features</h2>
+          <button class="feature-btn">Play Bonus Gift Game 🎁</button>
+          <button class="feature-btn">Contact Customer Service 💬</button>
+        </div>
+      </div>
+
+      <!-- Stats Tab -->
+      <div id="stats-tab" class="tab">
+        <div class="app-header">
+          <h1>Statistics</h1>
+          <p>Your electricity breakdown</p>
+        </div>
+        <div class="content">
+          <img src="assets/chart1.jpg.jpg" alt="Monthly Usage Chart" style="width:100%; border-radius:12px; box-shadow: 0 4px 20px rgba(0,123,255,0.3); margin-bottom: 30px;">
+
+          <h2 style="color: #333; margin-top: 30px;">Daily Comparison</h2>
+          <div id="daily-cards"></div>
+
+          <h2 style="color: #333; margin-top: 30px;">Tips to Save</h2>
+          <p>Turn off AC when not needed → Save up to 6 units/day!</p>
+
+         <footer class="fixed-footer">
+             Powered by TNB
+         </footer>
+        </div>
+      </div>
+
+      <!-- Ranking Tab -->
+      <div id="ranking-tab" class="tab">
+        <div class="app-header">
+          <h1>Monthly Ranking</h1>
+          <p>Top savers this month</p>
+        </div>
+        <div class="content">
+          <ol class="ranking-list">
+            <li><strong>1. EcoWarrior</strong> - 45 units</li>
+            <li><strong>2. GreenHome</strong> - 62 units</li>
+            <li><strong>3. You (Guest)</strong> - 118 units</li>
+            <li><strong>4. SaverPro</strong> - 135 units</li>
+            <li><strong>5. NatureLover</strong> - 142 units</li>
+          </ol>
+
+        <footer class="fixed-footer">
+         Powered by TNB
+        </footer>
+        </div>
+      </div>
+
+     
+
+      <!-- Profile Tab -->
+      <div id="profile-tab" class="tab">
+        <div class="app-header">
+          <h1>User123</h1>
+          <p>Settings & Preferences</p>
+        </div>
+        <div class="content">
+          <div class="setting">
+            <label>Dark Mode</label>
+            <input type="checkbox" id="dark-mode">
+          </div>
+          <div class="setting">
+            <label>Push Notifications</label>
+            <input type="checkbox" checked>
+          </div>
+          <div class="setting">
+            <label>Unit Preference</label>
+            <select>
+              <option>kWh</option>
+              <option>Units</option>
+            </select>
+          </div>
+          <button class="feature-btn" style="background:#ff4444; margin-top:30px;">Log Out</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-nav">
+      <button data-tab="home-tab" class="active">Home</button>
+      <button data-tab="stats-tab">Stats</button>
+      <button data-tab="ranking-tab">Ranking</button>
+      <button data-tab="profile-tab">Profile</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
