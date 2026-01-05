@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #0f86f5, #28a0eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, sans-serif;
+}
+
+/* PHONE FRAME */
+.phone {
+  width: 375px;
+  height: 812px;
+  background: #faf5f6;
+  border-radius: 36px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* STATUS BAR */
+.status-bar {
+  height: 44px;
+  padding: 0 20px;
+  background: #0f1d26;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* APP CONTENT CONTAINER */
+.app-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Prevents double scroll on iOS */
+}
+
+/* HEADER */
+.app-header {
+  background: linear-gradient(135deg, #0f86f5, #28a0eb);
+  color: white;
+  padding: 30px 20px 20px;
+  flex-shrink: 0;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.app-header p {
+  margin-top: 6px;
+  opacity: 0.9;
+}
+
+/* SCROLLABLE CONTENT AREA */
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: scroll;                /* Forces reliable scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth momentum on iOS */
+  min-height: 0;                     /* Critical Safari flex fix */
+}
+
+/* TABS */
+.tab {
+  display: none;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tab.active {
+  display: flex;
+}
+
+/* BOTTOM NAVIGATION - FIXED AT BOTTOM */
+.bottom-nav {
+  height: 80px;
+  padding-bottom: env(safe-area-inset-bottom); /* Handles iPhone home indicator */
+  background: white;
+  display: flex;
+  border-top: 1px solid #ddd;
+  flex-shrink: 0;
+}
+
+.bottom-nav button {
+  flex: 1;
+  border: none;
+  background: none;
+  font-size: 12px;
+  color: #666;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.bottom-nav button.active {
+  color: #0f86f5;
+  font-weight: bold;
+}
+
+/* OPTIONAL: Add icons later with ::before or img */
+
+/* ADDITIONS - NEWS, CARDS, ETC. */
+.news-feed .news-item {
+  background: white;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.news-feed img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.news-feed h3 {
+  padding: 12px 16px 4px;
+  margin: 0;
+  font-size: 18px;
+}
+
+.news-feed p {
+  padding: 0 16px 16px;
+  margin: 0;
+  color: #555;
+}
+
+.feature-btn {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  margin: 12px 0;
+  background: #0f86f5;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  box-shadow: 0 4px 15px rgba(15,134,245,0.4);
+}
+
+.usage-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 15px rgba(0,123,255,0.2);
+  border-left: 6px solid #0f86f5;
+}
+
+.usage-card h3 {
+  margin: 0 0 8px;
+  color: #0f86f5;
+}
+
+.usage-card .compare {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.ranking-list {
+  padding-left: 20px;
+  list-style: none;
+  
+}
+
+.ranking-list li {
+  font-size: 18px;
+  padding: 12px 0;
+  border: 2px solid #eee;
+  border-radius: 8px;
+
+}
+
+.fixed-footer {
+  padding: 12px 0;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  position-anchor: bottom;
+  color: #888;
+  font-size: 14px;}
+
+.ranking-list li:nth-child(1) { color: gold; font-weight: bold; }
+.ranking-list li:nth-child(2) { color: silver; }
+.ranking-list li:nth-child(3) { color: #cd7f32; }
