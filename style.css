@@ -7,7 +7,7 @@
 body {
   margin: 0;
   height: 100vh;
-  background: linear-gradient(135deg, #0f86f5, #28a0eb);
+  background: linear-gradient(135deg, #cbffc9, #28a0eb);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,7 +97,6 @@ body {
 .bottom-nav button {
   flex: 1;
   border: none;
-  background: none;
   font-size: 12px;
   color: #666;
   display: flex;
@@ -110,6 +109,7 @@ body {
 .bottom-nav button.active {
   color: #0f86f5;
   font-weight: bold;
+  
 }
 
 /* OPTIONAL: Add icons later with ::before or img */
@@ -206,3 +206,138 @@ body {
 .ranking-list li:nth-child(1) { color: gold; font-weight: bold; }
 .ranking-list li:nth-child(2) { color: silver; }
 .ranking-list li:nth-child(3) { color: #cd7f32; }
+
+.home-tab{
+  background-color: #e0f0ff;
+}
+
+
+
+/* Container for the ranking items */
+.ranking-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 80px; /* Space for footer */
+}
+
+/* Base style for every ranking row */
+.ranking-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+/* Circular rank number */
+.rank-pos {
+    width: 30px;
+    height: 30px;
+    background: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-right: 15px;
+    color: #555;
+}
+
+.rank-name {
+    flex-grow: 1;
+    font-weight: 600;
+    color: #333;
+}
+
+.rank-units {
+    font-size: 0.9rem;
+    color: #28a745; /* Green for units */
+    font-weight: bold;
+}
+
+/* Special Colors for Top 3 */
+.top-1 {
+    background: linear-gradient(135deg, #fff9e6 0%, #ffecb3 100%);
+    border: 1px solid #ffd700;
+}
+.top-1 .rank-pos { background: #ffd700; color: white; }
+
+.top-2 {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+    border: 1px solid #c0c0c0;
+}
+.top-2 .rank-pos { background: #c0c0c0; color: white; }
+
+.top-3 {
+    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+    border: 1px solid #cd7f32;
+}
+.top-3 .rank-pos { background: #cd7f32; color: white; }
+
+/* Highlighted style for the User (You) */
+.user-highlight {
+    background: #007bff; /* Blue theme */
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(0,123,255,0.3);
+}
+
+.user-highlight .rank-name, 
+.user-highlight .rank-units,
+.user-highlight .rank-pos {
+    color: white;
+}
+
+.user-highlight .rank-pos {
+    background: rgba(255,255,255,0.2);
+}
+
+
+
+/* 1. Ranking Tab Gradient Background */
+#ranking-tab .content {
+  background: linear-gradient(to right, #e3f2fd, #e8f5e9); /* Soft Blue to Soft Green */
+}
+
+/* 2. Dark Mode Styles */
+/* We apply the class to the .phone container to change the "App" appearance */
+.phone.dark-mode {
+  background: #121212; /* Dark background */
+}
+
+.phone.dark-mode .status-bar {
+  background: #000;
+}
+
+.phone.dark-mode .bottom-nav, 
+.phone.dark-mode .ranking-item, 
+.phone.dark-mode .news-item, 
+.phone.dark-mode .usage-card {
+  background: #1e1e1e; /* Dark cards */
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.phone.dark-mode .rank-name, 
+.phone.dark-mode h2, 
+.phone.dark-mode label,
+.phone.dark-mode .news-feed p,
+.phone.dark-mode .content {
+  color: #e0e0e0;
+}
+
+.phone.dark-mode .ranking-item.top-1,
+.phone.dark-mode .ranking-item.top-2,
+.phone.dark-mode .ranking-item.top-3 {
+    color: #333; /* Keep top 3 names dark for readability on gold/silver/bronze */
+}
+
+.phone.dark-mode .setting {
+  border-bottom: 1px solid #333;
+}
+
+
+
+
