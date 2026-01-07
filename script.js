@@ -46,3 +46,33 @@ document.querySelectorAll('.bottom-nav button').forEach(btn => {
 
 // Initial render
 renderDailyCards();
+
+
+
+// Dark Mode Toggle Logic
+const darkModeCheckbox = document.getElementById('dark-mode');
+const phoneContainer = document.querySelector('.phone');
+
+darkModeCheckbox.addEventListener('change', () => {
+  if (darkModeCheckbox.checked) {
+    phoneContainer.classList.add('dark-mode');
+  } else {
+    phoneContainer.classList.remove('dark-mode');
+  }
+});
+
+// Optional: Save Dark Mode preference in local storage so it stays when you refresh
+if (localStorage.getItem('dark-mode') === 'enabled') {
+  darkModeCheckbox.checked = true;
+  phoneContainer.classList.add('dark-mode');
+}
+
+darkModeCheckbox.addEventListener('change', () => {
+  if (darkModeCheckbox.checked) {
+    localStorage.setItem('dark-mode', 'enabled');
+  } else {
+    localStorage.setItem('dark-mode', 'disabled');
+  }
+});
+
+
