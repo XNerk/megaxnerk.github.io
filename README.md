@@ -1,2 +1,2 @@
-# MEGA
-SECP1013
+# PROJECT MEGA
+https://xnerk.github.io/megaxnerk.github.io/
